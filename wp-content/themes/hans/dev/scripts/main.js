@@ -3,7 +3,7 @@ jQuery(function(){
 
 	function setMobile(){
 		var mobile;
-		if($(window).width() < 767){
+		if($('.mobilecheck').is(':visible')){
 			mobile = true;
 		} else {
 			mobile = false;
@@ -84,7 +84,9 @@ jQuery(window).load(function(){
 	var $ = jQuery;
     $(".textcontent").mCustomScrollbar();
     $('.loadverlay').fadeOut(1000, function(){
-    	slider = new $.customSlider('.fullslider');
+    	if($('.fullslider')[0]){
+    		slider = new $.customSlider('.fullslider');
+    	}
     });
 
     $('.gallery').jMosaic({

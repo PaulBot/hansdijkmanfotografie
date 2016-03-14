@@ -7,7 +7,6 @@
 <div class="loadverlay"></div>
 <div class="contentcontainer images">
 	<div class="holder">
-		<h2><?php echo $queried_object->name; ?></h2>
 		<section class="gallery" id="lightbox">
 			<?php
 

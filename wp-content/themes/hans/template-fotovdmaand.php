@@ -3,7 +3,6 @@
 <div class="loadverlay"></div>
 <div class="contentcontainer clearfix overzicht">
 	<div class="holder">
-	<h2><?php the_title(); ?></h2>
 	<?php 
 		$args = array(
 

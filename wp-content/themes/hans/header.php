@@ -19,6 +19,7 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Titillium+Web:400,700,200,300,900,600' rel='stylesheet' type='text/css'>
 </head>
 <body <?php body_class('clearfix'); ?>>
+<div class="mobilecheck"></div>
   <header>
     <div class="container">
       <div class="logo">

@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <div class="loadverlay"></div>
 <div class="contentcontainer">
-		<h2><?php the_title(); ?></h2>
+	<div class="holder clearfix">
 		<section class="categories">
 
 			<?php 
@@ -42,7 +42,7 @@
 				} ?>
 
 		</section>
-		
+	</div>
 </div>
 
 <?php get_footer();

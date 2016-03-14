@@ -34,11 +34,10 @@ body, html{
 	font-weight:400;
 
 }
-h1, h2, h3{
-	font-family: $fnt-title;
-}
+
 h1{
 	text-transform: uppercase;
+	font-family: $fnt-title;
 }
 h2{
 	font-size:20px;
@@ -195,11 +194,12 @@ header{
 }
 
 .contentcontainer{
+	overflow:hidden;
 	position:relative;
-	background-color:#121212;
 	color:#FFF;
 	min-height:100vh;
-	padding:0 15px;
+	padding:15px;
+	background-color:#121212;
 	*{
 		max-width: 100%;
 	}
@@ -215,6 +215,23 @@ header{
 		padding-bottom:15px;
 	}
 
+}
+.page-template-template-gastenboek, .page-template-template-contact{
+	.contentcontainer{
+		background-color: RGBA(0,0,0,0.4);
+		padding:0;
+	}
+	.sidebar{
+		background-color:#121212;
+		padding:15px;
+		padding-top:28px;
+	}
+	.comments{
+		padding:15px;
+	}
+	header{
+		background-color:#000;
+	}
 }
 .sidebar, .imagecontent, .comments{
 	p:first-of-type{
@@ -233,8 +250,7 @@ header{
 		overflow:hidden;
 	}
 .blogitem{
-	margin-bottom:30px;
-	padding-bottom:20px;
+	margin-bottom:15px;
 	
 	h3{
 		margin-bottom:5px;
@@ -299,13 +315,14 @@ header{
 
 }
 .comment{
-	background-color:black;
-	max-width:500px;
 	margin:0 auto;
 	margin-bottom:20px;
-	padding:0 15px 20px 15px;
+	padding-bottom:15px;
 	overflow:hidden;
-
+	border-bottom:1px solid #aaa;
+	h3{
+		margin-bottom:5px;
+	}
 }
 #respond{
 	#reply-title, #email-notes, .comment-form-email, .comment-form-url, .comment-form-comment label{
@@ -328,6 +345,17 @@ header{
 		color:#FFF;
 	}
 }
+figcaption{
+	padding:10px;
+	font-weight:bold;
+}
+.background-holder{
+	position:fixed;
+	width:100%;
+	height:100vh;
+	top:0;
+	left:0;
+}
 @media(min-width: 450px){
 	header{
 		.logo{
@@ -345,11 +373,13 @@ header{
 }
 
 @media(min-width: 768px){
-
+	.mobilecheck{
+		display:none;
+	}
 	header{
 		height:100%;
 		position: fixed;
-		padding-top:40px;
+		padding-top:25px;
 		max-width:300px;
 		.menu{
 			li{
@@ -365,14 +395,14 @@ header{
 	}
 
 	.contentcontainer{
-		margin-left:300px;
-		padding:0;
-		.page-template-template-blog &, .page-template-galery &, .page-template-template-fotovdmaand & {
-			padding:40px 30px 0 30px;
+		background-color:transparent;
+		margin-left:298px;
+		padding-top:30px;
+		.page-template-template-blog &, .page-template-galery &, .page-template-template-fotovdmaand & , .single-post &, .page-template-default &{
 			background-color:#121212;
 		}
 		 .archive &{
-		 	padding:40px 0 0 0;
+		 	padding:0 0 0 0;
 		 	background-color:#121212;
 		 }
 		h2{
@@ -389,16 +419,43 @@ header{
 		}
 	}
 	.holder{
-		padding-top:40px;
+		background-color:#121212;
 	}
 	.imagecontent, .comments{
 		padding:0 15px;
 	}
 	.textcontent{
 		padding:0 20px;
+		a{
+			font-weight:bold;
+			text-decoration: underline;
+		}
 	}
 	.gallery{
 		padding:10px 10px;
+	}
+	.sidebar{
+		top:0;
+		h2{
+			padding:0 20px;
+		}
+	}
+	.blogitem{
+		margin-bottom: 30px;
+	}
+	.page-template-template-gastenboek, .page-template-template-contact{
+		.comments{
+			padding:30px;	
+		}
+		.sidebar{
+			background-color:transparent;
+		}
+		.holder{
+			background-color:transparent;
+		}
+		.comment{
+			max-width:500px;
+		}
 	}
 }
 
@@ -407,14 +464,13 @@ header{
 		max-width:330px;
 	}
 	.contentcontainer{
-		background-color:black;
-		margin-left:330px;
+		margin-left:328px;
 	}
 	.sidebar{
-		width:350px;
+		width:335px;
 		background-color:black;
 		height:calc(100vh);
-		padding-top:40px;
+		padding-top:25px;
 		position:fixed;
 		right:0;
 		padding-right:0;
@@ -422,24 +478,27 @@ header{
 		img{
 			width:30px;
 			display:block;
-			margin:50px  auto;
+			margin:25px  auto;
 		}
 	}
 	.textcontent{
 		overflow:hidden;
 		padding:0 0 40px  30px;
-		height:calc(100vh - 200px);
+		height:calc(100vh - 150px);
 		text-align: left;
 	}
 	.imagecontent, .comments{
-		width: calc(100% - 350px);
+		width: calc(100% - 335px);
 		float:left;
-		padding-top:45px;
-		background-color:#121212;
+		padding-top:0;
 		min-height:100vh;
 		img{
 			width:100%;
 		}
+	}
+	.imagecontent{
+		background-color:#121212;
+		padding-left:0;
 	}
 	.container{
 		width:auto;
@@ -447,13 +506,13 @@ header{
 		margin:0;
 	}
 	
-	.holder{
-		padding-top:0;
+	.background-holder{
 		width:100%;
+		background-color:#121212;
 	}
 	.blogitem{
 		display:inline-block;
-		width:46%;
+		width:47%;
 		&:nth-of-type(odd){
 			margin-right:2%;
 		}
@@ -461,9 +520,20 @@ header{
 			margin-left:2%;
 		}
 	}
+	.page-template-template-gastenboek, .page-template-template-contact{
+		.sidebar{
+			background-color:black;
+		}
+		.textcontent{
+			padding:0;
+		}
+	}
 }
 
 @media(min-width: 1300px){
+	header{
+		padding-top:45px;
+	}
 	.sidebar{
 		width:500px;
 		padding:40px 0 50px 0;
@@ -471,10 +541,12 @@ header{
 	.textcontent{
 		padding: 0 15px 40px 40px;
 	}
+	.contentcontainer{
+		padding-top:45px;
+	}
 	.imagecontent, .comments{
 		max-width:calc(100% - 500px);
 		padding:0 30px;
-		padding-top:45px;
 		img{
 			padding-bottom:30px;
 		}
@@ -488,6 +560,11 @@ header{
 		.imagecontent h2{
 			max-width:60%;
 			margin:0 auto;
+		}
+	}
+	.page-template-template-gastenboek, .page-template-template-contact{
+		.sidebar{
+			padding:40px;
 		}
 	}
 }
