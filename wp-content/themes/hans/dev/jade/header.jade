@@ -1,0 +1,19 @@
+doctype html
+<html <?php language_attributes(); ?>>
+head
+	meta(charset!="<?php bloginfo('charset'); ?>")
+	meta(name="viewport" content="width=device-width")
+	title 	<?php
+		| 	if (is_page('Home'))
+		|  		bloginfo('name');
+		|	elseif (have_posts()) {
+		|  		wp_title('', true);
+		|  		if (wp_title('', false)) {
+		|      		echo ' : ';
+		|  		} bloginfo('name');
+		|	} else {
+		|  		bloginfo('name');
+		| 	}
+		| 	?>
+	- wp_head();
+<body <?php body_class(); ?>>

@@ -1,0 +1,22 @@
+https://www.google.com/fonts/specimen/Titillium+Web
+hoofdtitel zelfde lettertype laten
+subtitel hoofdletters titillium
+font weight:200;
+meer line height
+meer padding textvak
+Gastenboek
+Titel 
+Titinium 200 weight
+Padding blok gelijk
+Tekst:    color: #aaa
+Border bottom:1px solid #666
+
+Missschien naast elkaar, minder breed 45%
+Reactieknop rechts en minder breed
+
+Acvhtergrond over de hele pagina
+
+Minder ruimte tussen fotos(6px);
+Titels weg (uitlijnen)
+Links in tekst dik en underlined
+Bericht word pas geplaats na goedkeuring

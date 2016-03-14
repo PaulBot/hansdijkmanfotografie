@@ -1,0 +1,30 @@
+{
+  "name": "hansdijkmanfotografie",
+  "version": "0.0.0",
+  "authors": [
+    "Paul Bot <p.p.bot@live.nl>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "baguettebox.js": "~1.4.1",
+    "imagesloaded": "~3.1.8",
+    "freewall": "~1.0.5",
+    "jquery": "~2.2.0"
+  },
+  "overrides": {
+    "masonry": {
+      "main": [
+        "./dist/masonry.pkgd.js"
+      ],
+      "dependencies": {}
+    }
+  }
+}
