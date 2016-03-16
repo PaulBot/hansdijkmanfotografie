@@ -232,6 +232,12 @@ header{
 	header{
 		background-color:#000;
 	}
+
+}
+.page-template-template-contact{
+	.imagecontent{
+		padding:15px;
+	}
 }
 .sidebar, .imagecontent, .comments{
 	p:first-of-type{
@@ -242,6 +248,9 @@ header{
 	line-height:1.7em;
 	img{
 		display:none;
+	}
+	h2{
+		margin-top:0;
 	}
 }
 .info{
@@ -396,7 +405,7 @@ figcaption{
 
 	.contentcontainer{
 		background-color:transparent;
-		margin-left:298px;
+		margin-left:297px;
 		padding-top:30px;
 		.page-template-template-blog &, .page-template-galery &, .page-template-template-fotovdmaand & , .single-post &, .page-template-default &{
 			background-color:#121212;
@@ -457,6 +466,17 @@ figcaption{
 			max-width:500px;
 		}
 	}
+	.page-template-template-contact{
+		.imagecontent{
+			padding:30px;
+			padding-top:25px;
+			min-height:100vh;
+			*{
+				max-width:400px;
+				margin:0 auto;
+			}
+		}
+	}
 }
 
 @media(min-width: 1025px){
@@ -464,7 +484,7 @@ figcaption{
 		max-width:330px;
 	}
 	.contentcontainer{
-		margin-left:328px;
+		margin-left:327px;
 	}
 	.sidebar{
 		width:335px;
@@ -488,10 +508,10 @@ figcaption{
 		text-align: left;
 	}
 	.imagecontent, .comments{
-		width: calc(100% - 335px);
+		width: calc(100% - 320px);
 		float:left;
 		padding-top:0;
-		min-height:100vh;
+		min-height: calc(100vh - 45px);
 		img{
 			width:100%;
 		}
@@ -547,6 +567,7 @@ figcaption{
 	.imagecontent, .comments{
 		max-width:calc(100% - 500px);
 		padding:0 30px;
+		min-height: auto;
 		img{
 			padding-bottom:30px;
 		}
